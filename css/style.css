@@ -99,6 +99,9 @@ p {
 
 /*link specifications*/
 
+a{
+  color: white;
+}
 /*Skip to Main Content*/
 a.skip{
   background: white;
@@ -116,6 +119,8 @@ a.skip:focus{
   color: black;
   text-decoration-style: solid;
 }
+
+
 
 /*no border for links*/
 a:active, a:focus {
