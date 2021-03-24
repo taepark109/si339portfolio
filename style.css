@@ -203,7 +203,7 @@ when on li with current class, bigger and different gradient*/
 .current{
   font-size: 1.5em;
   display: inline-block;
-  background: linear-gradient(135deg, #363636, gray, #363636);
+  background: linear-gradient(135deg, #242424, #363636, #242424);
   border-radius: 5px;
   padding: 3px;
 }
