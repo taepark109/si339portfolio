@@ -99,6 +99,10 @@ p {
 
 /*link specifications*/
 
+a:-webkit-any-link {
+    color: white;
+}
+
 /*Skip to Main Content*/
 a.skip{
   background: white;
