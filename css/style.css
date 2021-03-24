@@ -100,7 +100,7 @@ p {
 /*link specifications*/
 
 a{
-  color: white;
+  color: #242FFF;
 }
 /*Skip to Main Content*/
 a.skip{
@@ -136,6 +136,19 @@ a:visited {
  color: white; 
 }
 
+nav a{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px; 
+  text-decoration: none;
+}
+
+#works_button{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px; 
+  text-decoration: none;
+}
 /*nav format*/
 .nav_links{
   width:100%;
@@ -190,7 +203,7 @@ when on li with current class, bigger and different gradient*/
 .current{
   font-size: 1.5em;
   display: inline-block;
-  background: linear-gradient(135deg, #363636, gray, #363636);
+  background: linear-gradient(135deg, #363636, black, #363636);
   border-radius: 5px;
   padding: 3px;
 }
