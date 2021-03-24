@@ -99,10 +99,9 @@ p {
 
 /*link specifications*/
 
-a:-webkit-any-link {
-    color: white;
+a{
+  color: #242FFF;
 }
-
 /*Skip to Main Content*/
 a.skip{
   background: white;
@@ -121,9 +120,7 @@ a.skip:focus{
   text-decoration-style: solid;
 }
 
-a:link{
-  color: white;
-}
+
 
 /*no border for links*/
 a:active, a:focus {
@@ -139,6 +136,19 @@ a:visited {
  color: white; 
 }
 
+nav a{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px; 
+  text-decoration: none;
+}
+
+#works_button{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px; 
+  text-decoration: none;
+}
 /*nav format*/
 .nav_links{
   width:100%;
