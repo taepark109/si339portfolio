@@ -98,12 +98,12 @@ p {
 }
 
 /*link specifications*/
-
 a{
   color: #242FFF;
 }
 /*Skip to Main Content*/
 a.skip{
+  color: white;
   background: white;
   left: 0;
   padding: 6px;
