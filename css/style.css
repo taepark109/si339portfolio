@@ -443,8 +443,101 @@ input[type=submit]:hover {
   color:white;
 }
 
+/*tablet screen size responsive design*/
+@media (min-width: 600px){
+  
+  #logo{
+    display: inline-block;
+    padding-bottom: 0.5em;
+    margin-left: 20px;    
+    border-radius: 10px;
+  }
+
+  #avatar{
+    display: none;
+  }
+
+  .button{
+    margin-top: 20px;
+    position: relative; 
+    left: 87%;
+    transform: translateX(-50%);
+    border-radius: 1px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    color: white;
+    background-color: #3A5A5A;
+    margin-bottom: 0px;
+  }
+
+  /*nav format*/
+  .nav_links{
+    display: flex; 
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: center;
+    border-top: 1px solid white;
+  }
+
+  /*individual nav link format*/
+  .nav_item a{
+    color: white;
+    text-decoration: none;
+    margin:5px;
+  }
+
+  .nav_item a:hover, a:focus{
+    color: #ff6161;   
+    font-size: 1.5em;
+    text-decoration: underline;
+    -webkit-text-decoration-line: overline underline;
+    text-decoration-style: solid;   
+  }
+
+  /*separates nav items*/
+  nav li{
+    display:inline;
+    padding-right:50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /*when li is hovered, show linear gradient*/
+  nav ul li:hover{
+    display: inline-block;
+    background: linear-gradient(0.25turn, #363636, gray, #363636);
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  /*while clicking on link, background spec.*/
+  nav ul li a:active{
+    display: inline-block;
+    background: linear-gradient(135deg, black
+   60%, white);
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 50px;
+  }
+
+  .proj_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  padding: 10px;
+  width:100%;
+  text-align: center;
+  border-top: 3px solid black;
+  /*border-radius: 25px;*/
+  } 
+}
+
 /*different screen size spec*/
-@media screen and (min-width: 850px){
+@media (min-width: 850px){
 
 
 
