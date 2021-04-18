@@ -551,4 +551,7 @@ input[type=submit]:hover {
   html{
     scroll-behavior: auto;
   }
+  .parallax {
+    background-attachment: scroll;
+  }
 }
