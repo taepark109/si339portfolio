@@ -35,13 +35,14 @@ html {
 
 /*general body spec.*/
 body{
+  
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
   background: #3c3c3c;
   color:white;
   width: 100%;
-  overflow: auto;
+  overflow-x: hidden;
   /*color:#513B3E;*/
   animation: fadepage ease 1s;
   animation-fill-mode: backwards;
@@ -155,7 +156,7 @@ nav a{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding:5px;
+  padding:0px;
   margin-bottom: 10px;
 }
 
@@ -357,6 +358,8 @@ footer{
   transform: rotateY(180deg);
 }
 
+
+
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
@@ -384,17 +387,47 @@ footer{
 /*END OF FLIP CARD SPEC.*/
 
 /*resume button*/
-.button{
-  margin-top: 10px;
-  position: relative; 
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 3px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  color: white;
-  background-color: #3A5A5A;
-}
+.button {
+    border-radius: 4px;
+    background-color: #3A5A5A;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    width:125px;
+    transition: all 0.2s;
+    margin: 0px 0px 15px 0px;
+    position: 
+  }
+
+  .button span {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    position: relative;
+    transition: 0.2s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.2s;
+  }
+
+  .button:hover span {
+    padding-right: 20px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
 
 /*Who Am I? Text spec.*/
@@ -403,7 +436,7 @@ footer{
   flex-flow: column nowrap;
   align-content: center;
   margin-top: 30px;
-  border-top: 1px solid black;
+  padding: 15px 15px;
 }
 
 .about h2, .about p{
@@ -457,18 +490,47 @@ input[type=submit]:hover {
     display: none;
   }
 
-  .button{
-    margin-top: 20px;
-    position: relative; 
-    left: 87%;
-    transform: translateX(-50%);
-    border-radius: 1px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 22px;
-    color: white;
-    background-color: #3A5A5A;
-    margin-bottom: 0px;
-  }
+  .button {
+      border-radius: 4px;
+      background-color: #3A5A5A;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 10px;
+      width:125px;
+      transition: all 0.2s;
+      margin: 0px 0px 30px 0px;
+      position: 
+    }
+
+    .button span {
+      cursor: pointer;
+      display: block;
+      text-align: center;
+      position: relative;
+      transition: 0.2s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -10px;
+      transition: 0.2s;
+    }
+
+    .button:hover span {
+      padding-right: 20px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
 
   /*nav format*/
   .nav_links{
@@ -537,12 +599,202 @@ input[type=submit]:hover {
 }
 
 /*different screen size spec*/
-@media (min-width: 850px){
+@media (min-width: 900px){
+    /*nav format*/
+
+  .nav_links{
+    width:100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    padding:0px;
+    margin-bottom: 10px;
+  }
+
+  /*individual nav link format*/
+  .nav_item a{
+    color: white;
+    text-decoration: none;
+    margin:5px;
+  }
+
+  .nav_item a:hover, a:focus{
+    color: #ff6161;   
+    font-size: 1.5em;
+    text-decoration: underline;
+    -webkit-text-decoration-line: overline underline;
+    text-decoration-style: solid;   
+  }
+
+  /*separates nav items*/
+  nav li{
+    display:inline;
+    padding-right:20px;
+    padding-left: 20px;
+  }
+
+  /*when li is hovered, show linear gradient*/
+  nav ul li:hover{
+    display: inline-block;
+    background: linear-gradient(0.25turn, #363636, gray, #363636);
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  /*while clicking on link, background spec.*/
+
+
+  
+
+  /*current class for different pages
+  when on li with current class, bigger and different gradient*/
+  .current{
+    font-size: 1.5em;
+    display: inline-block;
+    background: linear-gradient(135deg, #242424, #363636, #242424);
+    border-radius: 5px;
+    padding: 3px;
+  }
+
+    nav ul li a:active{
+    display: inline-block;
+    background: linear-gradient(135deg, black 60%, white);
+    line-height: 0em; 
+    padding-bottom: 0.5em;
+    border-radius: 0px;
+    font-size: 2em;
+  }
+      /*FLIPCARD SPEC BELOW*/
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  #avatar{
+    display: block;
+  }
+  .flip-card {
+    position: relative; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+  }
 
 
 
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #e3e3e3;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    transform: rotateY(180deg);
+    line-height: 50px;
+  }
+  /*END OF FLIP CARD SPEC.*/
+  
+  /*Who Am I? Text spec.*/
+  .aboutcontainer{
+    display:grid;
+    grid-template-columns: 30% 70%;
+    background-image: url(../images/texture_parallax.png);
+    background-attachment: fixed;    
+    background-repeat: no-repeat; 
+    background-size: cover;    
+    background-position: center top;
+  }
+
+  .about{
+    display:block; 
+    min-height: 500px;  
+    border: 1px solid black;
+    margin-right: 20px;
+    margin-left: 30px;
+    box-shadow: 10px 10px black;
+    margin-bottom: 20px;
+    grid-column: 2 / -1;  
+    grid-row: 1 / span 1;
+    padding: 15px 15px;  
+    background: #3c3c3c; 
+  }
+
+
+
+  .button {
+    border-radius: 4px;
+    background-color: #3A5A5A;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    width:125px;
+    transition: all 0.2s;
+    margin: 0px 0px 30px 0px;
+    position: 
+  }
+
+  .button span {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    position: relative;
+    transition: 0.2s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.2s;
+  }
+
+  .button:hover span {
+    padding-right: 20px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 }
-
 /*reduced motion query*/
 @media (prefers-reduced-motion) {
   body{
@@ -553,5 +805,13 @@ input[type=submit]:hover {
   }
   .parallax {
     background-attachment: scroll;
+  }
+  .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0s;
+  transform-style: preserve-3d;
   }
 }
