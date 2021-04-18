@@ -794,6 +794,10 @@ input[type=submit]:hover {
     opacity: 1;
     right: 0;
   }
+
+  p{
+    font-size: 22px;
+  }
 }
 /*reduced motion query*/
 @media (prefers-reduced-motion) {
